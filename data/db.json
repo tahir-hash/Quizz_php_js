@@ -1,0 +1,37 @@
+{
+    "users":
+    [
+        {
+        "nom":"mbaye",
+        "prenom": "mbacke",
+        "login":"mbacke@gmail.com",
+        "password":"mbacke21",
+        "role":"ROLE_JOUEUR",
+        "score":15
+        },
+        {
+        "nom":"mbaye",
+        "prenom": "tahir",
+        "login":"tahir@gmail.com",
+        "password":"tahir21",
+        "role":"ROLE_ADMIN",
+        "score":0
+        },
+        {
+        "nom":"mbaye",
+        "prenom": "sanou",
+        "login":"sanou@gmail.com",
+        "password":"sanou16",
+        "role":"ROLE_JOUEUR",
+        "score":150
+        },
+        {
+        "nom":"mbaye",
+        "prenom": "ouli",
+        "login":"ouli@gmail.com",
+        "password":"ouli06",
+        "role":"ROLE_JOUEUR",
+        "score":200
+        }
+    ]
+}
