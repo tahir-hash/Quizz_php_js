@@ -5,7 +5,7 @@ function find_user_login_password(string $login,string $password):array
     foreach ($users as $user) 
     {
         if( $user['login']==$login && $user['password']==$password)
-        return $user;
+            return $user;
     }
     return [];
 }

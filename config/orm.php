@@ -7,7 +7,7 @@ function json_to_array(string $key):array
     return $data[$key];
 }
 //Enregistrement et Mis a jour des donnees du fichier
-function array_to_json(string $key,array $data):array
+function array_to_json(string $key,array $data)
 {
     $json= json_encode($data[$key],true);
     return $json;

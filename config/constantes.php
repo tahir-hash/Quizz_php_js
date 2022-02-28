@@ -1,4 +1,5 @@
 <?php
+//define("WEBROOT","http://localhost".DIRECTORY_SEPARATOR."quizz_mvc".DIRECTORY_SEPARATOR."public".DIRECTORY_SEPARATOR);
 
 /**
 * Chemin sur dossier racine du projet
@@ -17,5 +18,16 @@ define("PATH_VIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
 */
 define("PATH_DB",ROOT."data/db.json");
 /**
+
 * Chemin sur le dossier public , pour inclusion des images,css et js*/
-define("WEBROOT",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
+define("WEBROOT","http://localhost/quizz_mvc/public/");
+//Cle d'erreur
+define("KEY_ERRORS","errors");
+//cle connexion
+define("KEY_CONNECT","connect");
+///web public
+define("WEB_PUBLIC",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
+
+
+
+
