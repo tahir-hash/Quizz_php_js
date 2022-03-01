@@ -27,11 +27,27 @@
         },
         {
         "nom":"mbaye",
-        "prenom": "ouli",
-        "login":"ouli@gmail.com",
-        "password":"ouli06",
+        "prenom": "Aminata rassoul",
+        "login":"aminata@gmail.com",
+        "password":"aminata28",
         "role":"ROLE_JOUEUR",
-        "score":200
+        "score":321
+        },
+        {
+        "nom":"mbaye",
+        "prenom": "mami",
+        "login":"mami@gmail.com",
+        "password":"mami17",
+        "role":"ROLE_JOUEUR",
+        "score":340
+        },
+        {
+        "nom":"toure",
+        "prenom": "falilou",
+        "login":"fallou@gmail.com",
+        "password":"fallou12",
+        "role":"ROLE_JOUEUR",
+        "score":12
         }
     ]
 }

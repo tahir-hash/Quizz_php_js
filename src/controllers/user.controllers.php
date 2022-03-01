@@ -29,6 +29,10 @@ if($_SERVER['REQUEST_METHOD']=="GET")
         {
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
         }
+        else if($_REQUEST['action']=="inscription")
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."inscription.html.php"); 
+        }
         else if($_REQUEST['action']=="liste_joueur")
         {
             lister_joueur();
