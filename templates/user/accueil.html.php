@@ -12,7 +12,7 @@
 <?php if(is_admin()) : ?>
   <a href="<?= WEBROOT."?controller=user&action=home"?>" class="active">Liste de Questions</a>
   <a href="#">Créer Admin</a>
-  <a href="#">Liste Joueurs</a>
+  <a href="<?= WEBROOT."?controller=user&action=liste_joueur"?>">Liste Joueurs</a>
   <a href="#">Créer Questions</a>
 <?php endif ?>
   <a href="<?= WEBROOT."?controller=securite&action=logout"?>">Deconnexion</a>
