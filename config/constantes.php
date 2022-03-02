@@ -17,6 +17,7 @@ define("PATH_VIEWS",ROOT."templates".DIRECTORY_SEPARATOR);
 * Chemin sur data qui contient le fichier Json db.json
 */
 define("PATH_DB",ROOT."data/db.json");
+
 /**
 
 * Chemin sur le dossier public , pour inclusion des images,css et js*/

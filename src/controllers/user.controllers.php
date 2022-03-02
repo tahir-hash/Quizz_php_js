@@ -5,12 +5,13 @@ require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
 */
 if($_SERVER['REQUEST_METHOD']=="POST")
 {
-    if(isset($_REQUEST['action']))
+   if($_REQUEST['action']=="push")
     {
-        if($_REQUEST['action']=="connexion")
-        {
-            
-        }
+            $nom=$_POST['nom'];
+            $prenom=$_POST['prenom'];
+            $login=$_POST['login'];
+            $password=$_POST['password'];
+           inscrireAdmin($nom,$prenom,$login,$password);
     }
 }
 /**
@@ -29,13 +30,13 @@ if($_SERVER['REQUEST_METHOD']=="GET")
         {
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
         }
-        else if($_REQUEST['action']=="inscription")
-        {
-            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."inscription.html.php"); 
-        }
         else if($_REQUEST['action']=="liste_joueur")
         {
             lister_joueur();
+        }
+        else if($_REQUEST['action']=="newadmin")
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creeradmin.html.php"); 
         }
     }
 }

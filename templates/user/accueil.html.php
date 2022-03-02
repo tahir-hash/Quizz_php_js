@@ -16,7 +16,7 @@
                   </div>
                   <div class="info">
                         <h1>Bienvenue dans votre jeu de quizz</h1>
-                        <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."quizz.png"?>"style="margin-left:7%;" width="90%" alt="">
+                        <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."quizz.png"?>"style="margin-left:7%;" width="80%" alt="">
                   </div>
           </div>
 </body>

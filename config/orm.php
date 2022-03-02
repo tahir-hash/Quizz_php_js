@@ -6,9 +6,12 @@ function json_to_array(string $key):array
     $data=json_decode($dataJson,true);
     return $data[$key];
 }
+
 //Enregistrement et Mis a jour des donnees du fichier
-function array_to_json(string $key,array $data)
+function array_to_json(string $key, array $array_data)
 {
-    $json= json_encode($data[$key],true);
-    return $json;
+    $array[$key]=json_to_array("users");
+    $array[$key][]=$array_data;
+    $json=json_encode(["users"=>$array[$key]],JSON_PRETTY_PRINT);
+    file_put_contents(PATH_DB, $json);
 }

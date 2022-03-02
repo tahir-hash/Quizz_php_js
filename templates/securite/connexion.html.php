@@ -39,7 +39,7 @@
         <p style="color:black"><?= $errors['password'];?></p>
       <?php endif ?>
     </div>
-    <p class="inscription">S'inscrire pour <span><a href="<?= WEBROOT."?controller=user&action=inscription"?>">JOUER.</a></span></p>
+    <p class="inscription">S'inscrire pour <span><a href="<?= WEBROOT."?controller=securite&action=inscription"?>">JOUER.</a></span></p>
     <div align="center">
       <input type="submit" id="submit" value="Se connecter">
     </div>

@@ -1,53 +1,76 @@
 {
-    "users":
-    [
+    "users": [
         {
-        "nom":"mbaye",
-        "prenom": "mbacke",
-        "login":"mbacke@gmail.com",
-        "password":"mbacke21",
-        "role":"ROLE_JOUEUR",
-        "score":15
+            "nom": "mbaye",
+            "prenom": "mbacke",
+            "login": "mbacke@gmail.com",
+            "password": "mbacke21",
+            "role": "ROLE_JOUEUR",
+            "score": 15
         },
         {
-        "nom":"mbaye",
-        "prenom": "tahir",
-        "login":"tahir@gmail.com",
-        "password":"tahir21",
-        "role":"ROLE_ADMIN",
-        "score":0
+            "nom": "mbaye",
+            "prenom": "tahir",
+            "login": "tahir@gmail.com",
+            "password": "tahir21",
+            "role": "ROLE_ADMIN",
+            "score": 0
         },
         {
-        "nom":"mbaye",
-        "prenom": "sanou",
-        "login":"sanou@gmail.com",
-        "password":"sanou16",
-        "role":"ROLE_JOUEUR",
-        "score":150
+            "nom": "mbaye",
+            "prenom": "sanou",
+            "login": "sanou@gmail.com",
+            "password": "sanou16",
+            "role": "ROLE_JOUEUR",
+            "score": 150
         },
         {
-        "nom":"mbaye",
-        "prenom": "Aminata rassoul",
-        "login":"aminata@gmail.com",
-        "password":"aminata28",
-        "role":"ROLE_JOUEUR",
-        "score":321
+            "nom": "mbaye",
+            "prenom": "Aminata rassoul",
+            "login": "aminata@gmail.com",
+            "password": "aminata28",
+            "role": "ROLE_JOUEUR",
+            "score": 321
         },
         {
-        "nom":"mbaye",
-        "prenom": "mami",
-        "login":"mami@gmail.com",
-        "password":"mami17",
-        "role":"ROLE_JOUEUR",
-        "score":340
+            "nom": "mbaye",
+            "prenom": "mami",
+            "login": "mami@gmail.com",
+            "password": "mami17",
+            "role": "ROLE_JOUEUR",
+            "score": 340
         },
         {
-        "nom":"toure",
-        "prenom": "falilou",
-        "login":"fallou@gmail.com",
-        "password":"fallou12",
-        "role":"ROLE_JOUEUR",
-        "score":12
+            "nom": "toure",
+            "prenom": "falilou",
+            "login": "fallou@gmail.com",
+            "password": "fallou12",
+            "role": "ROLE_JOUEUR",
+            "score": 12
+        },
+        {
+            "nom": "mbaye",
+            "prenom": "tahir",
+            "login": "mbacke@gmail.com",
+            "password": "nabousoum98",
+            "score": "0",
+            "role": "ROLE_JOUEUR"
+        },
+        {
+            "nom": "Diop",
+            "prenom": "assane",
+            "login": "assan21@gmail.com",
+            "password": "assane21",
+            "score": "0",
+            "role": "ROLE_JOUEUR"
+        },
+        {
+            "nom": "Tahir",
+            "prenom": "Mamadou",
+            "login": "tahue@hgsh.com",
+            "password": "admin21",
+            "score": "0",
+            "role": "ROLE_ADMIN"
         }
     ]
 }

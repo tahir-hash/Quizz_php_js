@@ -1,5 +1,6 @@
 <?php
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
+
 /**
 * Traitement des Requetes POST
 */ 
@@ -12,6 +13,15 @@ if($_SERVER['REQUEST_METHOD']=="POST")
             $login=$_POST['login'];
             $password=$_POST['password'];
             connexion($login,$password);
+        }
+        else if($_REQUEST['action']=="push")
+        {
+            $nom=$_POST['nom'];
+            $prenom=$_POST['prenom'];
+            $login=$_POST['login'];
+            $password=$_POST['password'];
+           inscrireJoueur($nom,$prenom,$login,$password);
+            require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php"); 
         }
     }
 }
@@ -29,6 +39,10 @@ if($_SERVER['REQUEST_METHOD']=="GET")
         elseif($_REQUEST['action']=="logout")
         {
             logout();
+        }
+        else if($_REQUEST['action']=="inscription")
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."inscription.html.php"); 
         }
         else
         {

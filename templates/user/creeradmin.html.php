@@ -1,25 +1,29 @@
-
+<?php require_once(PATH_VIEWS.DIRECTORY_SEPARATOR."include".DIRECTORY_SEPARATOR."header.inc.html.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page de connexion.</title>
-  <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."inscription.css"?>">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."liste.css"?>">
+  <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."admin.css"?>">
+
+    <title>Document</title>
 </head>
 <body>
-    <div class="header">
-      <img src="" alt="">
-        <h1>LE PLAISIR DE JOUER</h1>
-    </div>
-    <div class="inscription">
+          <div class="contain">
+                  <div>
+                      <?php require_once(PATH_VIEWS.DIRECTORY_SEPARATOR."include".DIRECTORY_SEPARATOR."menu.inc.html.php");?>
+                  </div>
+                  <div class="info">
+                  <div class="inscription">
         <div class="left">
             <div class="text">
                 <h1>S'inscrire</h1>
                 <p>Pour tester votre niveau de culture génerale</p>
             </div>
             <form action="<?=WEBROOT?>" method="POST" class="form" id="form" onSubmit="return valider()">
-            <input type="hidden" name="controller" value="securite">
+            <input type="hidden" name="controller" value="user">
             <input type="hidden" name="action" value="push">
             <div class="form-control">
                 <label for="prenom">Prenom</label>
@@ -55,9 +59,12 @@
         </div>
         <div class="right">
         <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."avatar.png"?>" alt="">
-                <h3>Avatar du joueur</h3>
+                <h3>Avatar de l'admin</h3>
         </div>
     </div>
+                  </div>
+          </div>
   <script src="<?=WEB_PUBLIC."js".DIRECTORY_SEPARATOR."scriptIns.js"?>"></script>
+
 </body>
-</html>  
+</html>
