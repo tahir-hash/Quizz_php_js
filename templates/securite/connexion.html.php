@@ -16,34 +16,43 @@
 </head>
 <body>
     <div class="header">
-      <img src="" alt="">
+    <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."logo.png"?>"alt="">
         <h1>LE PLAISIR DE JOUER</h1>
     </div>
-  <form method="POST" action="<?=WEBROOT?>">
-    <h1>Se connecter</h1>
-    
-    <div class="inputs">
+    <div class="container">
+        <div class="loginform">
+            <h1>login form</h1>
+        </div>
+        <form class="form" id="form" method="POST" action="<?=WEBROOT?>" onSubmit="return valider()">
         <input type="hidden" name="controller" value="securite">
         <input type="hidden" name="action" value="connexion"> 
-      <?php if (isset($errors['connexion'])):?>
+        <?php if (isset($errors['connexion'])):?>
         <p style="color:red"><?= $errors['connexion'];?></p>
       <?php endif?>
-      <input id="login" type="text" placeholder="Login" name="login">
-      <span id="error_login"></span>
-      <?php if (isset($errors['login'])): ?>
+            <div class="form-control">
+                <label for="login">Login</label>
+                <input type="text" id="login" name="login" placeholder="Login"> 
+
+                <small></small> 
+                <?php if (isset($errors['login'])): ?>
         <p style="color:black"><?= $errors['login'];?></p>
       <?php endif ?>
-      <input id="password" type="password" placeholder="Mot de passe" name="password">
-      <span id="error_password"></span>
-      <?php if (isset($errors['password'])): ?>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <small></small>
+                <?php if (isset($errors['password'])): ?>
         <p style="color:black"><?= $errors['password'];?></p>
       <?php endif ?>
+            </div>
+            <div class="connected">
+                <input type="submit" value="Connexion">
+                <p class="inscription"><span><a href="<?= WEBROOT."?controller=securite&action=inscription"?>">S'inscrire pour jouer?</a></span></p>
+            </div>
+            
+        </form>
     </div>
-    <p class="inscription">S'inscrire pour <span><a href="<?= WEBROOT."?controller=securite&action=inscription"?>">JOUER.</a></span></p>
-    <div align="center">
-      <input type="submit" id="submit" value="Se connecter">
-    </div>
-  </form>
   <script src="<?=WEB_PUBLIC."js".DIRECTORY_SEPARATOR."script.js"?>"></script>
 </body>
 </html>  

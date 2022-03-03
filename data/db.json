@@ -71,6 +71,14 @@
             "password": "admin21",
             "score": "0",
             "role": "ROLE_ADMIN"
+        },
+        {
+            "nom": "mbaye",
+            "prenom": "tahir",
+            "login": "tahir32@gmail.com",
+            "password": "tahir21",
+            "score": "0",
+            "role": "ROLE_JOUEUR"
         }
     ]
 }

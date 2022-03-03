@@ -6,18 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."liste.css"?>">
-
-    <title>Document</title>
+  <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."admin.css"?>">
+  <title>Document</title>
 </head>
 <body>
           <div class="contain">
                   <div>
                       <?php require_once(PATH_VIEWS.DIRECTORY_SEPARATOR."include".DIRECTORY_SEPARATOR."menu.inc.html.php");?>
                   </div>
-                  <div class="info">
-                        <h1>Bienvenue dans votre jeu de quizz</h1>
-                        <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."quizz.png"?>"style="margin-left:7%;" width="80%" alt="">
-                  </div>
+
+                        <?= $contain_for_views ?>
           </div>
 </body>
 </html>

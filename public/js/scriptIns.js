@@ -73,9 +73,7 @@ function validPassword(input)
 }
 
 function valider()
-{
-    
-   
+{ 
    if(checkRequired([nom,prenom,login, password, password2]) || checkEmail(login) ||checkLength(password, 6, 25) ||validPassword(password) || checkPasswordMatch(password,password2))
    {
     return false;

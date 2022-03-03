@@ -9,7 +9,8 @@
 </head>
 <body>
         <div class="header">
-                <img src="" alt="">
+        <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."logo.png"?>"alt="">
+
                 <h1>LE PLAISIR DE JOUER</h1>
         </div>
         <div class="logout">

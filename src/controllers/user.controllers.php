@@ -23,12 +23,15 @@ if($_SERVER['REQUEST_METHOD']=="GET")
     {
         if(!is_connect())
         {
-            header("location".WEBROOT);
+            
+            header("location:".WEBROOT);
             exit();
+           
         }
         if($_REQUEST['action']=="home")
         {
-            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
+            lister_joueur();
+            
         }
         else if($_REQUEST['action']=="liste_joueur")
         {
@@ -36,13 +39,23 @@ if($_SERVER['REQUEST_METHOD']=="GET")
         }
         else if($_REQUEST['action']=="newadmin")
         {
+            ob_start();
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creeradmin.html.php"); 
+            $contain_for_views= ob_get_clean();
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
+        }
+        else if($_REQUEST['action']=="questions")
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."questions.html.php"); 
         }
     }
 }
 
 function lister_joueur()    
 {
+    ob_start();
     $data= find_users(ROLE_JOUEUR);
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.joueur.html.php"); 
+    $contain_for_views= ob_get_clean();
+    require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
 }

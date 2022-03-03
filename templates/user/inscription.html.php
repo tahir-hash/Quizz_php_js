@@ -1,4 +1,11 @@
-
+<?php
+    if(isset($_SESSION["error_ins"]))
+    {
+      $errors= $_SESSION["error_ins"];
+      unset($_SESSION["error_ins"]);
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +16,7 @@
 </head>
 <body>
     <div class="header">
-      <img src="" alt="">
+    <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."logo.png"?>"alt="">
         <h1>LE PLAISIR DE JOUER</h1>
     </div>
     <div class="inscription">
@@ -21,6 +28,9 @@
             <form action="<?=WEBROOT?>" method="POST" class="form" id="form" onSubmit="return valider()">
             <input type="hidden" name="controller" value="securite">
             <input type="hidden" name="action" value="push">
+            <?php if (isset($errors['inscription'])): ?>
+        <h3 style="color:red"><?= $errors['inscription'];?></h3>
+      <?php endif ?>
             <div class="form-control">
                 <label for="prenom">Prenom</label>
                 <input type="text" name="prenom"id="prenom" placeholder="Aaaaa">

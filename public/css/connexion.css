@@ -1,3 +1,9 @@
+:root
+{
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
 body
 {
   margin-top: 0;
@@ -15,58 +21,112 @@ body
     height: 50%;
     background-color: #052426;
     width: 100%;
+    display: flex;
 }
 .header h1
 {
     color: white;
-    text-align: center;
+    margin-left: 37%;
 }
-form {
-  margin-top: 15%;
-  padding: 2.5em 3.75em;
-  border-radius: 0.625em;
-  min-width: 30%;
-  border: 2px solid #191919;
+.header img
+{
+    margin-left: 1%;
 }
-form h1{
-  color: #004182;
-  text-align:center;
+.container
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    background-color: #F2F2F2;
+    width: 40%;
 }
 
-form .inputs {
-  display: flex;
-  flex-direction: column;
+.loginform
+{
+    display: flex;
+    background-color: rgb(81,191,208);
+    width: 100%;
+    height: 30%; 
 }
-form .inputs input[type='text'], input[type='password']{
-  padding: 0.938em;
-  border:none;
-  border-radius: 0.313em;
-  background-color:#f2f2f2;
-  outline:none;
-  margin-bottom: 0.938em;
+.loginform h1
+{
+    color: white;
+    margin: 1% 0 2% 3%;
+    text-transform: uppercase;
+}
+.form{
+    padding: 1.875em 2.5em;
+    border-top: 2px solid #C2C2C2;
+}
+
+.form-control{
+    margin-bottom: 0.625em;
+    padding-bottom: 1.25em;
+    position: relative;
+}
+
+.form-control label{
+    display: block;
+    margin-bottom: 0.313em;
+}
+
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 0.25em;
+    display: block;
+    width: 96%;
+    padding: 0.625em;
+    font-size: 0.875em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 form p.inscription{
-  font-size: 0.875em;
+  font-size: 1em;
   margin-bottom: 1.25em;
-  color: #191919;
+  color: #9A9A9A;
+
 }
 
 form p.inscription span a
 {
-    color: #004182;
+  color: #9A9A9A;
 }
-form input[type='submit']{
-  padding: 0.938em 1.563em;
-  border-radius: 0.313em;
-  border:none;
-  font-size: 0.938em;
-  color: #fff;
-  background-color: #004182;
-  outline:none;
-  cursor:pointer;
-}
-form input[type='submit']:hover
+.connected
 {
-  color: black;
-  background-color: #f7f7f2;
+    display: flex;
+    margin-bottom: 3%;
 }
+form input[type='submit']
+{
+  color: white;
+  background-color: rgb(81,191,208);
+    width: 20%;
+    margin-right: 8%;
+   
+}
+
+/* Pour javascript */
+.form-control input:focus{
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input{
+    border-color: var(--success-color);
+}
+
+.form-control.error input{
+    border-color: var(--error-color);
+}
+
+.form-control small{
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+

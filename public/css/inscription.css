@@ -20,11 +20,16 @@ body
     height: 50%;
     background-color: #052426;
     width: 100%;
+    display: flex;
 }
 .header h1
 {
     color: white;
-    text-align: center;
+    margin-left: 37%;
+}
+.header img
+{
+    margin-left: 1%;
 }
 .inscription
 {
@@ -79,7 +84,12 @@ body
     display: flex;
     justify-content: space-between;
 }
-
+a
+{
+    color: white;
+    margin-top: 1%;
+    text-decoration: none;
+}
 .file button
 {
     margin-top: 1.5%;

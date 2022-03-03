@@ -4,22 +4,71 @@ const span1=document.getElementById("error_login");
 const span2=document.getElementById("error_password");
 const submit=document.getElementById("submit");
 
+//Functions-------------------------------------------------------------
+function showError(input, message) {//Afficher les messages d'erreur
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerText = message;
+}
+//
+function showSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success'; 
+}
+//
+function checkEmail(input) {//Tester si l'email est valide :  javascript : valid email
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-submit.onmouseover = function()
+    if (re.test(input.value.trim().toLowerCase())) {
+        showSuccess(input);
+    } else {
+        showError(input,`Email is not valid!`);
+        return true;
+    }
+}
+//
+function checkRequired(inputArray) {// Tester si les champs ne sont pas vides
+    inputArray.forEach(input => {
+        if (input.value.trim() === '') {
+            showError(input,`${getFieldName(input)} est obligatoire`);
+            return true;
+        }else{
+            showSuccess(input);
+        }
+    });
+}
+//
+function getFieldName(input) {//Retour le nom de chaque input en se basant sur son id
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+//
+function checkLength(input, min, max) {//Tester la longueur de la valeur  d'un input
+    if(input.value.length < min){
+        showError(input, `${getFieldName(input)} doit avoir au moins ${min} caracteres!`);
+        return true;
+    }else if(input.value.length > max){
+        showError(input, `${getFieldName(input)} doit avoir au maximum ${max} caracteres !`);
+    }else{
+        showSuccess(input);
+    }
+}
+
+function validPassword(input)
 {
-    let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
     var letters = /[a-zA-Z]/; 
     var numbers =/[0-9]/; 
-    //non respect des contraintes
-    if(!regex.test(login.value))
+    if(!password.value.match(letters) || !password.value.match(numbers))
     {
-       // span1.innerText="Le login doit etre un email";
-       alert("Le login doit etre un email");
+        showError(input, 'Le mot de passe doit contenir au moins une lettre et un chiffre');
+        return true;
     }
-    
-    if((password.value.length)<6 || !password.value.match(letters) || !password.value.match(numbers))
-    {
-        //span2.innerText="Le mot de passe n'est pas valide";
-        alert("Le mot de passe doit contenir au moins 6 caractères et doit avoir aussi au moins une lettre et un chiffre");
-    }
+}
+
+function valider()
+{
+   if(checkRequired([login, password]) || checkEmail(login) ||checkLength(password, 6, 25) ||validPassword(password))
+   {
+    return false;
+   }
 }

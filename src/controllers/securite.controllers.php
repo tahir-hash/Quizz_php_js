@@ -1,4 +1,5 @@
 <?php
+
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
 
 /**
@@ -20,8 +21,19 @@ if($_SERVER['REQUEST_METHOD']=="POST")
             $prenom=$_POST['prenom'];
             $login=$_POST['login'];
             $password=$_POST['password'];
-           inscrireJoueur($nom,$prenom,$login,$password);
-            require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php"); 
+            if(find_login($login)==false)
+            {
+                inscrireJoueur($nom,$prenom,$login,$password);
+                require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php"); 
+            }
+            else
+            {
+                $errors=[];
+                $errors['inscription']="Login existant";
+                $_SESSION["error_ins"]= $errors;
+                header("location:".WEBROOT."?controller=securite&action=inscription");
+                exit();
+            }
         }
     }
 }
