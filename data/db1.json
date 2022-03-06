@@ -79,57 +79,40 @@
             "password": "tahir21",
             "score": "0",
             "role": "ROLE_JOUEUR"
+        },
+        {
+            "nom": "Soumare",
+            "prenom": "nabou",
+            "login": "nabousoum@gmail.com",
+            "password": "nabou21",
+            "score": "0",
+            "role": "ROLE_JOUEUR"
         }
     ],
-    "questions": [
+    "questions":[
         {
-            "quest": "Quel est mon repas favori ?",
-            "reponses": [
-                "Domada",
-                "Mafe",
-                "Mbakhalou Saloum",
-                "Thiebou Yapp"
-            ],
+            "quest":"Quel est mon repas favori ?",
+            "reponses" :["Domada","Mafe","Mbakhalou Saloum","Thiebou Yapp"],
             "rep": "b"
         },
         {
-            "quest": "Quel est mon surnom ?",
-            "reponses": [
-                "Capo Bi",
-                "The Real",
-                "Mbaye Pro 21",
-                "Kamro"
-            ],
+            "quest":"Quel est mon surnom ?",
+            "reponses" :["Capo Bi","The Real","Mbaye Pro 21","Kamro"],
             "rep": "c"
         },
         {
-            "quest": "Quelle est ma passion ?",
-            "reponses": [
-                "Informatique",
-                "Le droit",
-                "Fumer",
-                "Audit"
-            ],
+            "quest":"Quelle est ma passion ?",
+            "reponses" :["Informatique","Le droit","Fumer","Audit"],
             "rep": "a"
         },
         {
-            "quest": "Qui est mon joueur de foot favori ?",
-            "reponses": [
-                "Edouard mendy",
-                "Mbappe",
-                "Messi",
-                "Cristiano Ronaldo"
-            ],
+            "quest":"Qui est mon joueur de foot favori ?",
+            "reponses" :["Edouard mendy","Mbappe","Messi","Cristiano Ronaldo"],
             "rep": "d"
         },
         {
-            "quest": "Qui est mon joueur de basket favori ?",
-            "reponses": [
-                "Micheal Jordan",
-                "Stephen Curry",
-                "Lebron James",
-                "Lamello Ball"
-            ],
+            "quest":"Qui est mon joueur de basket favori ?",
+            "reponses" :["Micheal Jordan","Stephen Curry","Lebron James","Lamello Ball"],
             "rep": "c"
         }
     ]

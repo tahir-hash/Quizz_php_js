@@ -1,7 +1,8 @@
 const login=document.getElementById("login");
 const password=document.getElementById("password");
-const span1=document.getElementById("error_login");
-const span2=document.getElementById("error_password");
+const hide=document.getElementById("img1");
+const show=document.getElementById("img2");
+const span=document.getElementById("span");
 const submit=document.getElementById("submit");
 
 //Functions-------------------------------------------------------------
@@ -72,3 +73,4 @@ function valider()
     return false;
    }
 }
+

@@ -40,7 +40,7 @@
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password">    
                 <small></small>
                 <?php if (isset($errors['password'])): ?>
         <p style="color:black"><?= $errors['password'];?></p>

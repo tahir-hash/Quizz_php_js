@@ -50,9 +50,16 @@ tr,td,th
     margin-top: 1.5%;
     margin-bottom: 2%;
     background-color: #39DDD6;
-    color: white;
     font-size: 20px;
     position: relative;
-    left: 70%;
+    margin-right: 3%;
+  left: 50%;
 }
+.info button a
+{
+    text-decoration: none;
+    color: white;
+
+}
+
 

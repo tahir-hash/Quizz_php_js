@@ -36,6 +36,7 @@ if($_SERVER['REQUEST_METHOD']=="POST")
             }
         }
     }
+
 }
 /**
 * Traitement des Requetes GET
@@ -58,7 +59,7 @@ if($_SERVER['REQUEST_METHOD']=="GET")
         }
         else
         {
-          require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");   
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."error.html.php");   
         }
     }
     else

@@ -103,7 +103,6 @@ form input[type='submit']
     margin-right: 8%;
    
 }
-
 /* Pour javascript */
 .form-control input:focus{
     outline: 0;
