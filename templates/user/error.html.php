@@ -17,7 +17,7 @@
         <div class="text_error">
             <h1>Cette page n'existe pas</h1>
             <p>La page que vous recherchez semble introuvable. Sans détour, il n'est point de voyage... Retournez à la page de connexion.</p>
-            <button onclick="window.location.href = '<?= WEBROOT?>';">Retour a la page de connexion</button>
+            <button onclick="window.location.href = '<?= WEBROOT."?controller=user&action=home"?>';">Retour à la page d'accueil</button>
         </div>
         <div class="img_error">
             <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."error_404.svg"?>" alt="">

@@ -1,6 +1,7 @@
 {
     "users": [
         {
+            "id": 1,
             "nom": "mbaye",
             "prenom": "mbacke",
             "login": "mbacke@gmail.com",
@@ -9,6 +10,7 @@
             "score": 15
         },
         {
+            "id": 2,
             "nom": "mbaye",
             "prenom": "tahir",
             "login": "tahir@gmail.com",
@@ -17,6 +19,7 @@
             "score": 0
         },
         {
+            "id": 3,
             "nom": "mbaye",
             "prenom": "sanou",
             "login": "sanou@gmail.com",
@@ -25,6 +28,7 @@
             "score": 150
         },
         {
+            "id": 4,
             "nom": "mbaye",
             "prenom": "Aminata rassoul",
             "login": "aminata@gmail.com",
@@ -33,6 +37,7 @@
             "score": 321
         },
         {
+            "id": 5,
             "nom": "mbaye",
             "prenom": "mami",
             "login": "mami@gmail.com",
@@ -41,6 +46,7 @@
             "score": 340
         },
         {
+            "id": 6,
             "nom": "toure",
             "prenom": "falilou",
             "login": "fallou@gmail.com",
@@ -49,6 +55,7 @@
             "score": 12
         },
         {
+            "id": 7,
             "nom": "mbaye",
             "prenom": "tahir",
             "login": "mbacke@gmail.com",
@@ -57,6 +64,7 @@
             "role": "ROLE_JOUEUR"
         },
         {
+            "id": 8,
             "nom": "Diop",
             "prenom": "assane",
             "login": "assan21@gmail.com",
@@ -65,6 +73,7 @@
             "role": "ROLE_JOUEUR"
         },
         {
+            "id": 9,
             "nom": "Tahir",
             "prenom": "Mamadou",
             "login": "tahue@hgsh.com",
@@ -73,46 +82,77 @@
             "role": "ROLE_ADMIN"
         },
         {
+            "id": 10,
             "nom": "mbaye",
             "prenom": "tahir",
             "login": "tahir32@gmail.com",
             "password": "tahir21",
             "score": "0",
             "role": "ROLE_JOUEUR"
-        },
-        {
-            "nom": "Soumare",
-            "prenom": "nabou",
-            "login": "nabousoum@gmail.com",
-            "password": "nabou21",
-            "score": "0",
-            "role": "ROLE_JOUEUR"
         }
     ],
-    "questions":[
+    "questions": [
         {
-            "quest":"Quel est mon repas favori ?",
-            "reponses" :["Domada","Mafe","Mbakhalou Saloum","Thiebou Yapp"],
+            "id": 1,
+            "quest": "Quel est mon repas favori ?",
+            "reponses": [
+                "Domada",
+                "Mafe",
+                "Mbakhalou Saloum",
+                "Thiebou Yapp"
+            ],
             "rep": "b"
         },
         {
-            "quest":"Quel est mon surnom ?",
-            "reponses" :["Capo Bi","The Real","Mbaye Pro 21","Kamro"],
+            "id": 2,
+            "quest": "Quel est mon surnom ?",
+            "reponses": [
+                "Capo Bi",
+                "The Real",
+                "Mbaye Pro 21",
+                "Kamro"
+            ],
             "rep": "c"
         },
         {
-            "quest":"Quelle est ma passion ?",
-            "reponses" :["Informatique","Le droit","Fumer","Audit"],
+            "id":3,
+            "quest": "Qui est le president de PASTEF ?",
+            "reponses": [
+                "<input>"
+            ],
+            "rep": "c"
+        },
+        {
+            "id": 4,
+            "quest": "Quelle est ma passion ?",
+            "reponses": [
+                "Informatique",
+                "Le droit",
+                "Fumer",
+                "Audit"
+            ],
             "rep": "a"
         },
         {
-            "quest":"Qui est mon joueur de foot favori ?",
-            "reponses" :["Edouard mendy","Mbappe","Messi","Cristiano Ronaldo"],
+            "id": 5,
+            "quest": "Qui est mon joueur de foot favori ?",
+            "reponses": [
+                "Edouard mendy",
+                "Mbappe",
+                "Messi",
+                "Cristiano Ronaldo"
+            ],
             "rep": "d"
         },
         {
-            "quest":"Qui est mon joueur de basket favori ?",
-            "reponses" :["Micheal Jordan","Stephen Curry","Lebron James","Lamello Ball"],
+            "id":6,
+            "quest": "Qui est mon joueur de basket favori ?",
+            "reponses": [
+                "Micheal Jordan",
+                "Stephen Curry",
+                "Lebron James",
+                "Lamello Ball"
+            ],
             "rep": "c"
         }
     ]

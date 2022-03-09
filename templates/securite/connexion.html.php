@@ -5,6 +5,7 @@
       unset($_SESSION[KEY_ERRORS]);
     }
     
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +20,7 @@
     <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."logo.png"?>"alt="">
         <h1>LE PLAISIR DE JOUER</h1>
     </div>
+   
     <div class="container">
         <div class="loginform">
             <h1>login form</h1>

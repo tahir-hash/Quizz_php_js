@@ -28,6 +28,8 @@ define("KEY_ERRORS","errors");
 define("KEY_CONNECT","connect");
 ///web public
 define("WEB_PUBLIC",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
+define("WEB_PUB",str_replace("index.php","",$_SERVER['SCRIPT_FILENAME']));
+
 
 
 

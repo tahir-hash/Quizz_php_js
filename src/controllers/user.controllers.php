@@ -7,11 +7,35 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 {
    if($_REQUEST['action']=="push")
     {
+            $data = json_to_array("users");
+            $end_file= end($data);
+            $last_id = $end_file['id'];
             $nom=$_POST['nom'];
             $prenom=$_POST['prenom'];
             $login=$_POST['login'];
             $password=$_POST['password'];
-           inscrireAdmin($nom,$prenom,$login,$password);
+            $role=ROLE_ADMIN;
+            $image=$_POST['image'];
+            $image_name= $_FILES['image']['name'];
+            if(find_login($login)==false)
+            {
+                inscrire($last_id,$nom,$prenom,$login,$password,$role,$image_name);
+                $save=[];
+                $save['save_suc']="INSCRIPTION REUSSIE";
+                $_SESSION["save_ins"]= $save;
+                ob_start();
+                require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creeradmin.html.php"); 
+                $contain_for_views= ob_get_clean();
+                require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); 
+            }
+            else
+            {
+                $errors=[];
+                $errors['inscription']="Login existant";
+                $_SESSION["error_ins"]= $errors;
+                header("location:".WEBROOT."?controller=user&action=newadmin");
+                exit();
+            }
     }
 }
 /**

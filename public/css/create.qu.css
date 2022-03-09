@@ -1,0 +1,46 @@
+.formulaire_question
+{
+    width: 90.5%;
+}
+.form-block
+{
+    display: flex;
+}
+.form-block label
+{
+    margin-right: 3%;
+}
+.form-block textarea, .form-block input, .form-block select
+{   
+    margin-bottom: 2%;
+}
+.form-block textarea
+{
+    width: 100%;
+}
+.form-block input[type="number"]
+{
+    width:5%;
+}
+.form-block select
+{
+    width:80%;
+    height: 4vh;
+}
+.form-block input[type="text"]
+{
+    width: 75%;
+    height: 4vh;
+
+}
+#submit
+{
+    position: relative;
+    left: 70%;
+    width: 30%;
+    height: 5vh;
+    margin-bottom: 3%;
+    background-color: #51BFD0;
+    color: white;
+    font-size: 18px;
+}

@@ -30,27 +30,17 @@ function find_users(string $role):array
     }
     return $result;
 }
-function inscrireJoueur($nom,$prenom,$login,$password)
+function inscrire($id,$nom,$prenom,$login,$password,$role,$profil)
 {
     $put=array(
+            'id' => ++$id,
             'nom' => $nom,
             'prenom' => $prenom,
             'login' => $login,
             'password' => $password,
             'score' => '0',
-            'role' => ROLE_JOUEUR,
-            );
-                array_to_json("users",$put);
-}
-function inscrireAdmin($nom,$prenom,$login,$password)
-{
-    $put=array(
-            'nom' => $nom,
-            'prenom' => $prenom,
-            'login' => $login,
-            'password' => $password,
-            'score' => '0',
-            'role' => ROLE_ADMIN,
+            'role' => $role,
+            'profil'=>$profil
             );
                 array_to_json("users",$put);
 }

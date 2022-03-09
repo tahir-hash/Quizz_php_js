@@ -17,14 +17,24 @@ if($_SERVER['REQUEST_METHOD']=="POST")
         }
         else if($_REQUEST['action']=="push")
         {
+            $data = json_to_array("users");
+            $end_file= end($data);
+            $last_id = $end_file['id'];
             $nom=$_POST['nom'];
             $prenom=$_POST['prenom'];
             $login=$_POST['login'];
             $password=$_POST['password'];
+            $role=ROLE_JOUEUR;
+            $image=$_POST['image'];
+            $image_name= $_FILES['image']['name'];
             if(find_login($login)==false)
             {
-                inscrireJoueur($nom,$prenom,$login,$password);
-                require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php"); 
+                inscrire($last_id,$nom,$prenom,$login,$password,$role,$image_name);
+                $succes=[];
+                $succes['inscription_suc']="INSCRIPTION REUSSIE";
+                $_SESSION["succes_ins"]= $succes;
+                require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."inscription.html.php");
+                //require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php"); 
             }
             else
             {

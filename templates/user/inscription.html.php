@@ -4,14 +4,29 @@
       $errors= $_SESSION["error_ins"];
       unset($_SESSION["error_ins"]);
     }
-    
+    if(isset($_SESSION["succes_ins"]))
+    {
+      $success= $_SESSION["succes_ins"];
+      unset($_SESSION["succes_ins"]);
+    }
+    //upload
+    if(isset($_POST['submit']))
+    {
+        if(array_key_exists('image', $_FILES))
+        {
+            $image_name= $_FILES['image']['name'];
+            $tmp_image= $_FILES['image']['tmp_name'];
+            $folder= WEB_PUB."uploads".DIRECTORY_SEPARATOR;
+            move_uploaded_file($tmp_image, $folder.$image_name);
+        }
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page de connexion.</title>
+  <title>Page d'inscription</title>
   <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."inscription.css"?>">
 </head>
 <body>
@@ -25,12 +40,17 @@
                 <h1>S'inscrire</h1>
                 <p>Pour tester votre niveau de culture génerale</p>
             </div>
-            <form action="<?=WEBROOT?>" method="POST" class="form" id="form" onSubmit="return valider()">
+            <form action="<?=WEBROOT?>" method="POST" class="form" id="form" onSubmit="return valider()" enctype= "multipart/form-data">
+            <div class="formulaire">
             <input type="hidden" name="controller" value="securite">
             <input type="hidden" name="action" value="push">
             <?php if (isset($errors['inscription'])): ?>
         <h3 style="color:red"><?= $errors['inscription'];?></h3>
       <?php endif ?>
+      <!-- inscription done -->
+      <?php if (isset($success['inscription_suc'])):?>
+        <p style="color:#2ecc71;"><?= $success['inscription_suc'];?></p>
+      <?php endif?>
             <div class="form-control">
                 <label for="prenom">Prenom</label>
                 <input type="text" name="prenom"id="prenom" placeholder="Aaaaa">
@@ -54,19 +74,22 @@
             <div class="form-control">
                 <label for="password2">Confirm password</label>
                 <input type="password" name="password2" id="password2" placeholder="Confirm your password">
-                <small></small>
+                <small></small> <br>
             </div>
-            <div class="file">
-                <h3>Avatar</h3>
-                <button>Choisir un fichier</button>
+            <input type="submit" name="submit" value="Creer un compte">
+            <p style="color:#2ecc71;" class="retour"><span><a style="color:red;" href="<?= WEBROOT."?controller=securite&action=connexion"?>">Se connecter</a></span></p>
             </div>
-            <input type="submit" value="Creer un compte">
+            
+            <div class="right">
+                <label for="avatar_img">
+                    <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."avatar.png"?>" id="default_img" alt="">
+                </label>
+                <input type="file" name="image" accept=".jpg,.png,.jpeg" id="avatar_img">
+                    <h3>Avatar du joueur</h3>
+            </div>
         </form>
         </div>
-        <div class="right">
-        <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."avatar.png"?>" alt="">
-                <h3>Avatar du joueur</h3>
-        </div>
+        
     </div>
   <script src="<?=WEB_PUBLIC."js".DIRECTORY_SEPARATOR."scriptIns.js"?>"></script>
 </body>

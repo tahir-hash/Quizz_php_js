@@ -1,9 +1,11 @@
+
+                  
                   <div class="info">
                     <h1>Liste des Joueurs</h1>
                       <table id="example">
                         <tr>
-                          <th>NOM</th>
                           <th>PRENOM</th>
+                          <th>NOM</th>
                           <th>SCORE</th>
                         </tr>
                         <tr>

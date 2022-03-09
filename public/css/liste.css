@@ -59,7 +59,8 @@ tr,td,th
 {
     text-decoration: none;
     color: white;
-
 }
-
-
+.info .liste_q
+{
+   padding-left: 4%;
+}
