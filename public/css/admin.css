@@ -62,8 +62,7 @@
     display: flex;
     justify-content: space-between;
 }
-
-input[type="submit"]
+.submit
 {
     position: relative;
     left: 100%;
@@ -75,7 +74,7 @@ input[type="submit"]
 }
 .right
 {
-    margin-left: 90%;
+    margin-left: 100%;
     margin-top: 5%;
     width: 30%;
 }

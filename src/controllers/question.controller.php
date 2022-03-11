@@ -1,6 +1,7 @@
 <?php
 
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
+require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."question.model.php");
 
 /**
 * Traitement des Requetes POST
@@ -9,9 +10,44 @@ if($_SERVER['REQUEST_METHOD']=="POST")
 {
     if(isset($_REQUEST['action']))
     {
-        if($_REQUEST['action']=="connexion")
+        if($_REQUEST['action']=="ajout")
         {
-            echo "traite";
+            /* var_dump($_POST);
+            die; */
+            $data = json_to_array("questions");
+            $end_file= end($data);
+            $last_id = $end_file['id'];
+            $question=$_POST['textarea'];
+            $point=$_POST['nombre'];
+            $type=$_POST['select'];
+            $input=$_POST['input'];
+            foreach ($input as $index => $input){
+                $reponses[$index]=$input;
+                //print_r($reponses);
+            }
+            //$correct=['xjghj','jxf'];
+            switch($type)
+            {
+                case 'texte':
+                    $correct=$reponses;
+                    print_r($reponses);
+                break;
+                case 'multi':
+                    $check=$_POST['checkbox'];
+                    foreach ($check as $value){
+                        $correct[]=$value;
+                        print_r($correct); 
+                    }
+                break;
+                case 'unique':
+                    $radio=$_POST['radio'];
+                        $correct[]=$radio;
+                        print_r($correct); 
+
+                break;
+            }
+          
+           save_question($last_id,$question,$point,$type,$reponses,$correct);
         }  
     }
 }

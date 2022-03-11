@@ -6,13 +6,32 @@
                     <div class="liste_q">
                           <?php /*  */
                           foreach ($items as $value) :?>
-                              <span><?= $value['id']."."." ".$value['quest'];?></span>
-                              <ul type="square">
-                                  <?php foreach ($value['reponses'] as $val_reponses) :?>
-                                  <li><?= $val_reponses;?></li>
-                                  <?php endforeach ?>
-                              </ul>
-                              <?php endforeach ?>
+                              <span><?= $value['id']."."." ".$value['question'];?></span>
+                              <!-- type multi -->
+                              <?php if($value['type']=='multi') :?>
+                                <ul type="square">
+                                    <?php foreach ($value['reponses'] as $val_reponses) :?>
+                                    <li><?= $val_reponses;?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                              <?php endif ?>
+                              <!-- type texte -->
+                              <?php if($value['type']=='texte') :?>
+                                <ul>
+                                    <?php foreach ($value['reponses'] as $val_reponses) :?>
+                                   <input type="text" value="<?= $val_reponses;?>" disabled>
+                                    <?php endforeach ?>
+                                </ul>
+                              <?php endif ?>
+                              <!-- type radion -->
+                              <?php if($value['type']=='unique') :?>
+                                <ul type="circle">
+                                    <?php foreach ($value['reponses'] as $val_reponses) :?>
+                                    <li><?= $val_reponses;?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                              <?php endif ?>
+                          <?php endforeach ?>
                     </div>
                     
                     <div class="butt">

@@ -65,7 +65,7 @@
                 <input type="password" name="password2" id="password2" placeholder="Confirm your password"><br>
                 <small></small>
             </div>
-            <input type="submit" value="Creer un compte"> 
+            <input type="submit" class="submit" value="Creer un compte"> 
             </div>
             <div class="right">
                 <label for="avatar_img">

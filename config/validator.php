@@ -8,14 +8,15 @@ function champ_obligatoire(string $key,string $data,array &$errors,string $messa
 }
 function valid_email(string $key,string $data,array &$errors,string $message="Email invalid")
 {
-    if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $data)) 
-    {
-        $errors[$key]=$message;
-    }
-    /* if(!filter_var($data,FILTER_VALIDATE_EMAIL))
+    $test="gmail";
+    /* if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $data)) 
     {
         $errors[$key]=$message;
     } */
+    if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([$test]+\.)+[a-z]{2,6}$/ix", $data)) 
+    {
+        $errors[$key]=$message;
+    }
 }
 function valid_password (string $key,string $data,array &$errors,string $message="Password invalid")
 {

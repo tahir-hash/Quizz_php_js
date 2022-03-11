@@ -26,10 +26,11 @@ if($_SERVER['REQUEST_METHOD']=="POST")
             $password=$_POST['password'];
             $role=ROLE_JOUEUR;
             $image=$_POST['image'];
-            $image_name= $_FILES['image']['name'];
+            $explode=explode("@",$login);
+            $name= $explode[0];
             if(find_login($login)==false)
             {
-                inscrire($last_id,$nom,$prenom,$login,$password,$role,$image_name);
+                inscrire($last_id,$nom,$prenom,$login,$password,$role,$name);
                 $succes=[];
                 $succes['inscription_suc']="INSCRIPTION REUSSIE";
                 $_SESSION["succes_ins"]= $succes;

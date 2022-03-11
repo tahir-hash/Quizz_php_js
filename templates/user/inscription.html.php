@@ -12,12 +12,16 @@
     //upload
     if(isset($_POST['submit']))
     {
+        //var_dump($_FILES);
         if(array_key_exists('image', $_FILES))
         {
+            $email=$_POST['login'];
+            $explode=explode("@",$email);
+            $name= $explode[0];
             $image_name= $_FILES['image']['name'];
             $tmp_image= $_FILES['image']['tmp_name'];
             $folder= WEB_PUB."uploads".DIRECTORY_SEPARATOR;
-            move_uploaded_file($tmp_image, $folder.$image_name);
+            move_uploaded_file($tmp_image, $folder.$name);
         }
     } 
 ?>
