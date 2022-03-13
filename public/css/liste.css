@@ -64,3 +64,36 @@ tr,td,th
 {
    padding-left: 4%;
 }
+.info #form_liste
+{
+    margin: 2% 0 3% 50%;
+}
+
+#form_liste label
+{
+    color: #8D8070;
+}
+ input[type="number"]
+{
+    width: 10%;
+    margin-left: 3%;
+}
+#form_liste input[type="submit"]
+{
+    background-color: #5E91B0;
+    text-transform: uppercase;
+    margin-left: 3% ;
+}
+.info .questions
+{
+   padding-left: 9%;
+   margin-left: 4%;
+    width: 80%;
+   border: 1px solid #39DDD6;
+   border-radius: 40px;
+}
+.info .questions h3
+{
+    text-transform: uppercase;
+    color: #8D8070;
+}

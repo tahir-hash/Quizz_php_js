@@ -83,73 +83,33 @@
         },
         {
             "id": 10,
-            "nom": "SFE",
-            "prenom": "GSFB",
-            "login": "hdvghef@jdghf.coSS",
-            "password": "TAHIR21",
+            "nom": "teg",
+            "prenom": "tahir",
+            "login": "tahir44@gmail.com",
+            "password": "tahir21",
             "score": "0",
-            "role": "ROLE_ADMIN",
-            "profil": "Cycle-de-vie-dun-projet.png"
+            "role": "ROLE_JOUEUR",
+            "profil": "tahir44"
         },
         {
             "id": 11,
-            "nom": "SF",
-            "prenom": "QFD",
-            "login": "tahir@gmail.coCCC",
-            "password": "TAHIR21",
+            "nom": "jgcshjg",
+            "prenom": " bgjh",
+            "login": "tahir333@gmail.com",
+            "password": "tahir21",
             "score": "0",
             "role": "ROLE_JOUEUR",
-            "profil": "d\u00e9marrage-de-projet-d-affaires-planification-financi\u00e8re-processus-d\u00e9veloppement-id\u00e9e-strat\u00e9gie-gestion-r\u00e9alisation-et-136357458.jpg"
+            "profil": "tahir333"
         },
         {
             "id": 12,
-            "nom": "Diop",
+            "nom": "kjgsh",
             "prenom": "ibrahima",
-            "login": "tahir@gmail.ed",
-            "password": "tahir21",
-            "score": "0",
-            "role": "ROLE_ADMIN",
-            "profil": "FireShot Capture 002 - Cette page n'existe pas - OpenClassrooms - openclassrooms.com.png"
-        },
-        {
-            "id": 13,
-            "nom": "mbaye",
-            "prenom": "tahir",
-            "login": "gtd@gmail.com",
-            "password": "tahir21",
+            "login": "tahir-hash@gmail.com",
+            "password": "TAHIR21",
             "score": "0",
             "role": "ROLE_JOUEUR",
-            "profil": "TRELLO.jpeg"
-        },
-        {
-            "id": 14,
-            "nom": "mbaye",
-            "prenom": "tahir",
-            "login": "mback@gmail.com",
-            "password": "tahir21",
-            "score": "0",
-            "role": "ROLE_JOUEUR",
-            "profil": "3-12657.jpeg"
-        },
-        {
-            "id": 15,
-            "nom": "ngvsh",
-            "prenom": "nbgb",
-            "login": "tahir11@gmail.com",
-            "password": "tahir21",
-            "score": "0",
-            "role": "ROLE_JOUEUR",
-            "profil": "TRELLO.jpeg"
-        },
-        {
-            "id": 16,
-            "nom": "gsdhf",
-            "prenom": "cghgsj",
-            "login": "tahir210@gmail.com",
-            "password": "tahir21",
-            "score": "0",
-            "role": "ROLE_JOUEUR",
-            "profil": "tahir210"
+            "profil": "tahir-hash"
         }
     ],
     "questions": [
@@ -237,6 +197,60 @@
             ],
             "correct": [
                 "Lebron James"
+            ]
+        },
+        {
+            "id": 7,
+            "question": "gkj,;dhsj",
+            "point": "11",
+            "type": "multi",
+            "reponses": [
+                "snbq",
+                "qbsd",
+                "bdsb"
+            ],
+            "correct": [
+                "1",
+                "2"
+            ]
+        },
+        {
+            "id": 8,
+            "question": "shjg",
+            "point": "12",
+            "type": "texte",
+            "reponses": [
+                "n,sbd"
+            ],
+            "correct": [
+                "n,sbd"
+            ]
+        },
+        {
+            "id": 9,
+            "question": "tahir",
+            "point": "12",
+            "type": "unique",
+            "reponses": [
+                " ndsb",
+                "gsdhg",
+                "njghs",
+                ";,"
+            ],
+            "correct": [
+                "1"
+            ]
+        },
+        {
+            "id": 10,
+            "question": "tahir",
+            "point": "12",
+            "type": "texte",
+            "reponses": [
+                "diop"
+            ],
+            "correct": [
+                "diop"
             ]
         }
     ]

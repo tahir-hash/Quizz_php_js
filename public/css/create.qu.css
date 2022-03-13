@@ -1,3 +1,8 @@
+:root{
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
 .formulaire_question
 {
     width: 90.5%;
@@ -18,9 +23,11 @@
 {
     width: 100%;
 }
-.form-block input[type="number"]
+.form-block #nombre
 {
     width:5%;
+    height: 2%;
+    margin-left: 2%;
 }
 .form-block select
 {
@@ -49,4 +56,36 @@ input[type='checkbox']
     height: 26px;
     width: 24px;
     border: 3px solid red;
+}
+.lab_que
+{
+    margin-left: 3%;
+}
+.inc-dec
+{   
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+/* js */
+.form-block input:focus,form-block textarea:focus{
+    outline: 0;
+    border-color: #777;
+}
+
+.form-block.success input,.form-block.success textarea{
+    border-color: var(--success-color);
+}
+
+.form-block.error input{
+    border-color: var(--error-color);
+}
+
+.form-block small{
+    color: var(--error-color);
+    visibility: hidden;
+}
+
+.form-block.error small{
+    visibility: visible;
+    margin-left: 3%;
 }

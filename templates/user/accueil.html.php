@@ -18,5 +18,6 @@
 
                         <?= $contain_for_views ?>
           </div>
+          
 </body>
 </html>
