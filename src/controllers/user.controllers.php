@@ -16,10 +16,12 @@ if($_SERVER['REQUEST_METHOD']=="POST")
             $password=$_POST['password'];
             $role=ROLE_ADMIN;
             $image=$_POST['image'];
-            $image_name= $_FILES['image']['name'];
+            $explode=explode("@",$login);
+            $extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+            $name= $explode[0].".".$extension;
             if(find_login($login)==false)
             {
-                inscrire($last_id,$nom,$prenom,$login,$password,$role,$image_name);
+                inscrire($last_id,$nom,$prenom,$login,$password,$role,$name);
                 $save=[];
                 $save['save_suc']="INSCRIPTION REUSSIE";
                 $_SESSION["save_ins"]= $save;

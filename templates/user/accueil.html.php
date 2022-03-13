@@ -15,8 +15,12 @@
                   <div>
                       <?php require_once(PATH_VIEWS.DIRECTORY_SEPARATOR."include".DIRECTORY_SEPARATOR."menu.inc.html.php");?>
                   </div>
-
+<?php if(is_admin()) : ?>
                         <?= $contain_for_views ?>
+                        <?php endif ?>
+                        <?php if(is_joueur()) : ?>
+                          <?php require_once(PATH_VIEWS.DIRECTORY_SEPARATOR."user".DIRECTORY_SEPARATOR."jeu.html.php");?>
+                        <?php endif ?>
           </div>
           
 </body>

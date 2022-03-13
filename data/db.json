@@ -7,7 +7,8 @@
             "login": "mbacke@gmail.com",
             "password": "mbacke21",
             "role": "ROLE_JOUEUR",
-            "score": 15
+            "score": 15,
+            "profil": ""
         },
         {
             "id": 2,
@@ -16,7 +17,8 @@
             "login": "tahir@gmail.com",
             "password": "tahir21",
             "role": "ROLE_ADMIN",
-            "score": 0
+            "score": 0,
+            "profil": "tahir.jpeg"
         },
         {
             "id": 3,
@@ -110,6 +112,16 @@
             "score": "0",
             "role": "ROLE_JOUEUR",
             "profil": "tahir-hash"
+        },
+        {
+            "id": 13,
+            "nom": "mbaye",
+            "prenom": "ibrahima",
+            "login": "ibou@gmail.com",
+            "password": "ibou21",
+            "score": "0",
+            "role": "ROLE_JOUEUR",
+            "profil": "ibou.png"
         }
     ],
     "questions": [
@@ -201,56 +213,17 @@
         },
         {
             "id": 7,
-            "question": "gkj,;dhsj",
-            "point": "11",
-            "type": "multi",
-            "reponses": [
-                "snbq",
-                "qbsd",
-                "bdsb"
-            ],
-            "correct": [
-                "1",
-                "2"
-            ]
-        },
-        {
-            "id": 8,
-            "question": "shjg",
-            "point": "12",
-            "type": "texte",
-            "reponses": [
-                "n,sbd"
-            ],
-            "correct": [
-                "n,sbd"
-            ]
-        },
-        {
-            "id": 9,
-            "question": "tahir",
-            "point": "12",
+            "question": "D\u2019o\u00f9 vient le Corona?",
+            "point": "7",
             "type": "unique",
             "reponses": [
-                " ndsb",
-                "gsdhg",
-                "njghs",
-                ";,"
+                "S\u00e9n\u00e9gal",
+                "Chine",
+                "Italie",
+                "Usa"
             ],
             "correct": [
-                "1"
-            ]
-        },
-        {
-            "id": 10,
-            "question": "tahir",
-            "point": "12",
-            "type": "texte",
-            "reponses": [
-                "diop"
-            ],
-            "correct": [
-                "diop"
+                "2"
             ]
         }
     ]

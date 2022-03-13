@@ -11,8 +11,13 @@
 <body>
 <div class="menu">
     <div class="avatar">
-        <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."avatar.png"?>" alt="">
-        <h3>Lorem Ipsum</h3>
+      <?php if($_SESSION[KEY_CONNECT]['profil'] !=""):?>
+        <img src="<?= WEBROOT."uploads".DIRECTORY_SEPARATOR.$_SESSION[KEY_CONNECT]['profil']?>" alt="">
+        <?php endif?>
+        <?php if($_SESSION[KEY_CONNECT]['profil'] ==""):?>
+        <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."images.png"?>" alt="">
+        <?php endif?>
+        <h3><?= $_SESSION[KEY_CONNECT]['prenom']." ".$_SESSION[KEY_CONNECT]['nom']?></h3>
     </div>
     <div class="vertical-menu">
   <a href="<?= WEBROOT."?controller=user&action=home"?>" class="active">Acceuil <img class="link" src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>"alt=""></a>

@@ -48,10 +48,13 @@ if($_SERVER['REQUEST_METHOD']=="POST")
                 break;
             }
            save_question($last_id,$question,$point,$type,$reponses,$correct);
-            /* ob_start();
+           $succes=[];
+            $succes['question_suc']="ENREGISTREMENT REUSSI";
+            $_SESSION["succes_ques"]= $succes;
+            ob_start();
             require_once(PATH_VIEWS."question".DIRECTORY_SEPARATOR."create.questions.html.php");
             $contain_for_views=ob_get_clean();
-            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php"); */
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
         }  
     }
 }

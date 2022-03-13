@@ -1,8 +1,18 @@
-                <div class="info">
+              <?php
+              if(isset($_SESSION["succes_ques"]))
+              {
+                $success= $_SESSION["succes_ques"];
+                unset($_SESSION["succes_ques"]);
+              }
+              ?>
+              <div class="info">
                     <h1>PARAMETRER VOS QUESTIONS</h1>
                     <form action="" class="formulaire_question" id="formulaire_question" method="POST" onSubmit="return question_form()">
                         <input type="hidden" name="controller" value="question">
                         <input type="hidden" name="action" value="ajout">
+                        <?php if (isset($success['question_suc'])):?>
+                            <p style="color:#2ecc71;"><?= $success['question_suc'];?></p>
+                        <?php endif?>
                     <div id="saisie">
                         <div class="form-block">
                             <label class="lab_que" for="textarea">Questions</label>

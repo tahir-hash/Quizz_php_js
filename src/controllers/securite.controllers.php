@@ -27,7 +27,8 @@ if($_SERVER['REQUEST_METHOD']=="POST")
             $role=ROLE_JOUEUR;
             $image=$_POST['image'];
             $explode=explode("@",$login);
-            $name= $explode[0];
+            $extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
+            $name= $explode[0].".".$extension;
             if(find_login($login)==false)
             {
                 inscrire($last_id,$nom,$prenom,$login,$password,$role,$name);

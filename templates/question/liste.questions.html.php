@@ -1,3 +1,4 @@
+                                   <!--  <?php print_r($val_reponses);?> -->
             
                   <div class="info">
                   <form action="<?=WEBROOT?>" method="GET" id="form_liste">
@@ -16,9 +17,12 @@
                               <!-- type multi -->
                               <?php if($value['type']=='multi') :?>
                                 <ul type="square">
-                                    <?php foreach ($value['reponses'] as $val_reponses) :?>
-                                    <li><?= $val_reponses;?></li>
-                                    <?php endforeach ?>
+                                    <?php for ($i=0;$i<count ($value['reponses']) ; $i++) :?>
+                                    <li><?= $value['reponses'][$i]?></li>
+                                    <?php endfor ?>  <br>
+                                    <?php for ($i=0;$i<count ($value['correct']) ; $i++) :?>
+                                    <li><?= $value['reponses'][intval($value['correct'])]?></li>
+                                    <?php endfor ?>
                                 </ul>
                               <?php endif ?>
                               <!-- type texte -->
